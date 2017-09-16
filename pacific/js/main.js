@@ -29,7 +29,7 @@ $(window).on('scroll', function () {
 	// Step 2: Log distanceScrolled to the console to see what it holds!
 	console.log(distanceScrolled);
 	// if distanceScrolled is greater than or equal to 542
-	if (distanceScrolled > 30) {
+	if (distanceScrolled > 100) {
 
 		// Add a class to the nav to make it fixed
 		$('nav').addClass('scrolled');

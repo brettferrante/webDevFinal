@@ -1,6 +1,7 @@
 
-
-/*Import your fonts above this line*/
+/*Import Raleway 400, 600 and 700 on line #1 (must be on first line)*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,700i|Spectral:400,400i');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
 
 /* ----------------------------------------
 Base Styles
@@ -10,13 +11,187 @@ Base Styles
 }
 
 body {
+  margin: 0px 0px 0px 0px;
+  padding: 10px 10px;
+  font-family:  'Raleway', sans-serif;
+}
 
+h1, h2 {
+  text-align: center;
 }
 
 img {
   max-width: 100%;
+  margin: 0px 0px 0px 0px;
+
 }
 
-/* ----------------------------------------
-Add your own comments for organization!
-------------------------------------------- */
+header{
+
+}
+
+header nav{
+  font-family: 'Raleway', sans-serif;
+  top:0;
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.5s ease;
+
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav a{
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  margin-right: 45px;
+  margin-left: 20px;
+  text-align: center;
+  color: #000;
+
+}
+
+.pacific {
+  background-image: url('../images/home-header.jpg');
+  background-position: center;
+  height: 100vh;
+  color: white;
+  text-align: center;
+}
+
+
+main div ul li {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.brunch, .dinner, .drinks {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.brunch, .dinner {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.drinks {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.hidden-element {
+  display: none;
+}
+
+.reservation {
+  background-color: #6C8AFF;
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+
+.reservation button {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 50px;
+  border: none;
+  background-color: orange;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+header h4 {
+  font-size: 30px;
+}
+.footer-info {
+  display: grid;
+  grid-template-columns: (3, 1fr);
+  color: white;
+  background-color: black;
+}
+
+.hours {
+  grid-column: 1;
+}
+
+.links {
+  grid-column: 2;
+}
+
+.phone {
+  grid-column: 3;
+}
+
+.aside {
+  display: grid;
+  grid-template-columns: (2, 1fr);
+}
+
+.map {
+  grid-column: 2;
+  grid-row: 1/3;
+}
+
+.address {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.aside-hours {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.modal {
+  color: black;
+  opacity: 1;
+  position: fixed;
+  top:0;
+  width: 100px;
+  height: 100px;
+  color: black;
+  z-index: 200;
+}
+
+.scrolled {
+  background-color: white;
+  color: black;
+  position: fixed;
+  top: 0;
+}
+
+.slash {
+  padding: 0 20px;
+}
+.menu-active {
+  border-bottom: 2px solid orange;
+}
+
+main ul {
+  text-align: center;
+  padding: 0;
+}
+.menu-link {
+  color: orange;
+  text-decoration: none;
+  left: 50%
+}
+
+.footer-info {
+  text-align: center;
+  color: white;
+}
+
+.footer-info a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
