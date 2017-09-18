@@ -1,0 +1,360 @@
+
+/*Import Raleway 400, 600 and 700 on line #1 (must be on first line)*/
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Raleway:400,700');
+
+/* ----------------------------------------
+Base Styles
+------------------------------------------- */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family:  'Raleway', sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  margin: 0px 0px 0px 0px;
+
+}
+
+header{
+  background-image: url('../images/home-header.jpg');
+  background-position: center;
+  height: 75vh;
+
+}
+
+header nav{
+  font-family: 'Raleway', sans-serif;
+  top:0;
+  text-align: center;
+  width: 100%;
+  z-index: 100;
+  transition: all 0.5s ease;
+
+}
+
+h1 {
+  z-index: 1;
+}
+
+nav ul {
+  padding-top: 10px;
+}
+nav ul li {
+  display: inline-block;
+}
+
+
+nav a{
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  margin-right: 45px;
+  margin-left: 20px;
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+}
+
+.pacific {
+  font-family: 'Permanent Marker', cursive;
+  position: absolute;
+  color: white;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+.pacific h1, .pacific h4 {
+  margin: 5px;
+
+}
+
+
+main div ul li {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.brunch, .dinner, .drinks {
+  display: grid;
+  grid-gap: 20px;
+  transition: 3s;
+}
+
+.brunch, .dinner {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.drinks {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.hidden-element {
+  display: none;
+}
+
+.reservation {
+  background-color: #6C8AFF;
+  width: 100%;
+  height: 100px;
+  position: relative;
+}
+
+.reservation button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background-color: orange;
+  color: white;
+  padding: 20px;
+  box-shadow: 10px 10px 5px #888888;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 100px;
+}
+
+header h4 {
+  font-size: 30px;
+}
+.footer-info {
+  display: grid;
+  grid-template-columns: (3, 1fr);
+  color: white;
+  background-color: black;
+}
+
+.hours {
+  grid-column: 1;
+}
+
+.links {
+  grid-column: 2;
+}
+
+.phone {
+  grid-column: 3;
+}
+
+aside {
+  display: grid;
+  grid-template-columns: (2, 1fr);
+}
+
+.map {
+  grid-column: 2;
+  grid-row: 1/5;
+  margin: 18px;
+  width: 100%
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-20%, 0%);
+}
+.contact {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.address {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+.aside-hours {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.modal {
+  position: fixed;
+  opacity: 0.3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  z-index: 150;
+}
+
+.reservation-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 75vw;
+  height: 55vh;
+  background-color: white;
+  z-index: 200;
+}
+ .reservation-box i {
+   top: 5%;
+   left: 93%;
+   position: absolute;
+ }
+.reservation-box input {
+  border: 2px solid black;
+  width: 90%;
+  margin: 20px 50px;
+  padding: 20px;
+}
+.reservation-box button {
+  border: 2px solid black;
+  width: 90%;
+  margin: 20px 50px;
+  padding: 20px;
+  color: white;
+  background-color: black;
+}
+
+.scrolled {
+  background-color: white;
+  color: black;
+  position: fixed;
+  top: 0;
+  z-index: 115;
+}
+
+.slash {
+  padding: 0 20px;
+}
+.menu-active {
+  border-bottom: 2px solid orange;
+}
+
+main {
+    padding: 10px 30px;
+}
+
+main ul {
+  text-align: center;
+  padding: 0;
+}
+.menu-link {
+  color: orange;
+  text-decoration: none;
+  left: 50%;
+  font-weight: 700;
+}
+
+.footer-info {
+  text-align: center;
+  color: white;
+}
+
+.footer-info a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
+
+.transition {
+  transform: translate(0);
+  z-index: 180;
+}
+
+@media only screen and (max-width: 800px) {
+  .brunch, .dinner, .drinks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  aside {
+    grid-template-columns: repeat (3, 1fr);
+  }
+  .map {
+    grid-column: 1/4;
+    grid-row: 1;
+  }
+  .contact {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .address{
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .aside-hours {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  .map iframe {
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-5%, 0%);
+  }
+  .reservation-box input, .reservation-box button {
+    margin: 20px 30px;
+}
+
+@media only screen and (max-width: 600px) {
+  .brunch, .dinner, .drinks {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+  .footer-info {
+    display: none;
+  }
+
+  aside {
+    display: block;
+    text-align: center;
+  }
+  nav ul li {
+    display: grid;
+    grid-template-columns: repeat (1, 1fr);
+    padding-top: 30px;
+
+  }
+  nav {
+    transform: translateY(-1000%);
+    transition: 3s;
+    box-shadow: 10px 10px 5px #888888;
+    background-color: white;
+    color: black;
+    position: fixed;
+    top: 0;
+    z-index: 115;
+
+  }
+
+  nav a {
+    z-index: 200;
+  }
+
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    z-index: 1000;
+  }
+
+  .fa-bars {
+    color: black;
+    position: fixed;
+    right: 5%;
+    top: 5%;
+  }
+
+  .map iframe {
+    transform: translate(-3%, 0%);
+  }
+}
